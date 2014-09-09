@@ -1,0 +1,38 @@
+<div class="jumbotron">
+  <h2>Welcome to Phoenix!</h2>
+  <p class="lead">Phoenix is an Elixir Web Framework targeting full-featured, fault tolerant applications with realtime functionality.</p>
+
+  <script>
+    (function() {
+
+      var socket = new Phoenix.Socket("/ws");
+
+      socket.join("channel", "topic", {"server": "<%= @server %>"}, function(channel) {
+
+        channel.on("new_slide", function(slide) {
+          console.log("Got " + slide.content + " while listening for event new_slide");
+          var area = document.getElementById("slide-area");
+          area.innerHTML = slide.content;
+        });
+
+        // onSomeEvent(function() {
+          // channel.send("topic:event", {data: "json stuff"});
+        // });
+
+      });
+    })();
+  </script>
+</div>
+
+<div class="row marketing">
+  <div id="slide-area" class="col-lg-6">
+    <h4>Resources</h4>
+    <ul>
+      <li>
+        <a href="http://api.phoenixframework.org/">Docs</a>
+      </li>
+      <li>
+        <a href="https://github.com/phoenixframework/phoenix">Source</a>
+      </li>
+    </ul>
+  </div>
