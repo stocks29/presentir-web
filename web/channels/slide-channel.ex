@@ -3,11 +3,9 @@ defmodule PresentirWeb.SlideChannel do
 
   def join(socket, "topic", params) do
     server = params["server"]
-    IO.puts "joining server #{server}"
+    IO.puts "websocket client joining #{server}"
     Presentir.SlideServer.add_client(
       {:global, server}, PresentirWeb.Web.Client.new(socket))
-    
-    # spawn fn -> send_slide(socket, "new_slide", inspect message) end
     {:ok, socket}
   end
 
@@ -15,11 +13,4 @@ defmodule PresentirWeb.SlideChannel do
     {:error, socket, :unauthorized}
   end
 
-  defp send_slide(socket, topic, message), do: send_slide(socket, topic, message, 0)
-
-  defp send_slide(socket, topic, message, count) do
-    :timer.sleep(2000)
-    reply socket, topic, %{content: "#{message} Slide #{count}"}
-    send_slide(socket, topic, message, count + 1)
-  end
 end

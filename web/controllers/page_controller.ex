@@ -1,9 +1,12 @@
 defmodule PresentirWeb.PageController do
   use Phoenix.Controller
 
-  def index(conn, params) do
-    IO.puts "#{inspect params}"
-    render conn, "index", server: params["server"]
+  def index(conn, _params) do
+    render conn, "index"
+  end
+
+  def presentation(conn, params) do
+    render conn, "presentation", server: params["server"]
   end
 
   def not_found(conn, _params) do

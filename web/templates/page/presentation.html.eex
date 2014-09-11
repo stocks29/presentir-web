@@ -1,0 +1,26 @@
+<script>
+  (function() {
+
+    var socket = new Phoenix.Socket("/ws");
+
+    socket.join("channel", "topic", {"server": "<%= @server %>"}, function(channel) {
+
+      channel.on("new_slide", function(slide) {
+        console.log("Got " + slide.content + " while listening for event new_slide");
+        var area = document.getElementById("slide-area");
+        area.innerHTML = slide.content;
+      });
+
+      // onSomeEvent(function() {
+        // channel.send("topic:event", {data: "json stuff"});
+      // });
+
+    });
+  })();
+</script>
+
+<div class="row marketing">
+  <div id="slide-area" class="col-lg-12">
+    <p>This is not the presentation you're looking for...</p>
+  </div>
+</div>

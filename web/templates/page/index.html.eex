@@ -1,38 +1,28 @@
 <div class="jumbotron">
-  <h2>Welcome to Phoenix!</h2>
-  <p class="lead">Phoenix is an Elixir Web Framework targeting full-featured, fault tolerant applications with realtime functionality.</p>
-
-  <script>
-    (function() {
-
-      var socket = new Phoenix.Socket("/ws");
-
-      socket.join("channel", "topic", {"server": "<%= @server %>"}, function(channel) {
-
-        channel.on("new_slide", function(slide) {
-          console.log("Got " + slide.content + " while listening for event new_slide");
-          var area = document.getElementById("slide-area");
-          area.innerHTML = slide.content;
-        });
-
-        // onSomeEvent(function() {
-          // channel.send("topic:event", {data: "json stuff"});
-        // });
-
-      });
-    })();
-  </script>
+  <h2>Welcome to WebPresentir!</h2>
+  <p class="lead">WebPresentir is a distributed presentation platform built using the Phoenix Web Framework and Elixir.</p>
 </div>
 
-<div class="row marketing">
-  <div id="slide-area" class="col-lg-6">
+<div class="row">
+  <div class="col-lg-6">
+    <h4>Join Presentation</h4>    
+    <p>To join a presentation, navigate to /presentation/{presentationId}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
     <h4>Resources</h4>
     <ul>
       <li>
-        <a href="http://api.phoenixframework.org/">Docs</a>
+        <a href="http://elixir-lang.org/">Elixir Docs</a>
       </li>
       <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
+        <a href="http://api.phoenixframework.org/">Phoenix Docs</a>
+      </li>
+      <li>
+        <a href="https://github.com/phoenixframework/phoenix">Phoenix Source</a>
       </li>
     </ul>
   </div>
+</div>

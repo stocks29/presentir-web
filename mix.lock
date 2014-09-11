@@ -4,7 +4,7 @@
   "phoenix": {:package, "0.4.1"},
   "plug": {:package, "0.7.0"},
   "poison": {:package, "1.1.0"},
-  "presentir": {:git, "/Users/bob/projects/presentir", "72204e3bfa800f6881f098f3888903e8ff85ffbe", []},
+  "presentir": {:git, "/Users/bob/projects/presentir", "7c8b548a6405bb9ff1a8f6bbe748c011f1dd0d7c", []},
   "ranch": {:package, "1.0.0"},
   "timex": {:package, "0.12.5"},
   "uuid": {:package, "0.1.5"}}

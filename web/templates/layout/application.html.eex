@@ -7,24 +7,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Phoenix!</title>
+    <title>WebPresentir</title>
     <script type="text/javascript" src="/js/phoenix.js"></script>
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/presentir.css">
   </head>
 
   <body>
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a href="https://github.com/phoenixframework/phoenix">Get Started</a></li>
+          <li><a href="/">Home</a></li>
         </ul>
-        <span class="logo"></span>
       </div>
 
       <%= @inner %>
 
       <div class="footer">
-        <p><a href="http://phoenixframework.org">phoenixframework.org</a></p>
+        <p>WebPresentir powered by 
+          <a href="http://phoenixframework.org">phoenixframework.org</a> and
+          <a href="http://elixir-lang.org/">elixir-lang.org</a>
+        </p>
       </div>
 
     </div> <!-- /container -->
