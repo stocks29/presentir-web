@@ -24,7 +24,7 @@ defmodule PresentirWeb.Mixfile do
   # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
     [
-      {:presentir, git: "/Users/bob/projects/presentir"},
+      {:presentir, git: "https://github.com/stocks29/presentir.git"},
       {:phoenix, "0.4.1"},
       {:cowboy, "~> 1.0.0"}
     ]
