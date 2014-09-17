@@ -3,8 +3,8 @@
   "linguist": {:package, "0.1.2"},
   "phoenix": {:package, "0.4.1"},
   "plug": {:package, "0.7.0"},
-  "poison": {:package, "1.1.0"},
-  "presentir": {:git, "https://github.com/stocks29/presentir.git", "bb9d01a1a3870b7990ccdfcf91dbb13590b50b9e", []},
+  "poison": {:package, "1.1.1"},
+  "presentir": {:git, "https://github.com/stocks29/presentir.git", "40b09cc056648e6db4cf56fd6c0f65c611d4713d", []},
   "ranch": {:package, "1.0.0"},
-  "timex": {:package, "0.12.5"},
+  "timex": {:package, "0.12.7"},
   "uuid": {:package, "0.1.5"}}
